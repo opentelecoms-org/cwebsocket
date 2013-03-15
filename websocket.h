@@ -35,7 +35,6 @@ extern "C" {
 #include <stdio.h> /* sscanf */
 #include <ctype.h> /* isdigit */
 #include <stddef.h> /* size_t */
-#include "md5.h"
 #ifdef __AVR__
 	#include <avr/pgmspace.h>
 #else

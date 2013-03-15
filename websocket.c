@@ -22,6 +22,7 @@
  */
 
 #include "websocket.h"
+#include "md5.h"
 
 #ifndef TRUE
 #define TRUE 1
