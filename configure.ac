@@ -1,0 +1,26 @@
+
+AC_INIT(websocket,1.0.0)
+AC_CONFIG_SRCDIR(websocket.c)
+
+SO_RELEASE=`echo $PACKAGE_VERSION | cut -f1,2 -d.`
+AC_SUBST(SO_RELEASE)
+
+#LIBTOOL_VERSION_RELEASE="-version-info 0:0:0 -release @SO_RELEASE@"
+LIBTOOL_VERSION_RELEASE="-release $SO_RELEASE"
+AC_SUBST(LIBTOOL_VERSION_RELEASE)
+
+########## End of release/version data ######################
+
+AC_CONFIG_AUX_DIR([build-aux])
+AC_CONFIG_MACRO_DIR([m4])
+AM_INIT_AUTOMAKE
+
+AM_CONFIG_HEADER(config.h)
+
+AC_PROG_CC
+AC_PROG_INSTALL
+
+AC_PROG_LIBTOOL
+
+AC_OUTPUT(Makefile)
+
